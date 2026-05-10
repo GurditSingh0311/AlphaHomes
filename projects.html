@@ -237,7 +237,7 @@
 
         const baseItems = [
             { src: 'alpha%20photos/WhatsApp%20Image%202026-04-28%20at%2009.35.00.jpeg', category: 'Built-in Refrigeration', title: 'Panel-Ready Refrigeration', alt: 'Built-in refrigeration project by Alpha Home Solutions', height: 'h-[300px] md:h-[420px]' },
-            { src: 'alpha%20photos/WhatsApp%20Image%202026-04-28%20at%2009.34.30.jpeg', category: 'Kitchen Appliance Package', title: 'Integrated Kitchen Finish', alt: 'Integrated appliance package project by Alpha Home Solutions', height: 'h-[300px] md:h-[400px]' },
+            { src: 'alpha%20photos/picture28.jpeg', category: 'Ventilation Systems', title: 'Range Hood Installation', alt: 'Range hood installation project by Alpha Home Solutions', height: 'h-[300px] md:h-[400px]' },
             { src: 'alpha%20photos/WhatsApp%20Image%202026-04-28%20at%2009.34.45.jpeg', category: 'Home Improvement', title: 'Clean Support Work & Finishing', alt: 'Home improvement support project by Alpha Home Solutions', height: 'h-[300px] md:h-[390px]' },
             { src: 'alpha%20photos/WhatsApp%20Image%202026-04-28%20at%2009.36.58.jpeg', category: 'Wall Oven Installation', title: 'Built-In Oven Package', alt: 'Wall oven installation project by Alpha Home Solutions', height: 'h-[260px] md:h-[300px]' },
             { src: 'alpha%20photos/WhatsApp%20Image%202026-04-28%20at%2009.37.32.jpeg', category: 'Gas Range Installation', title: 'Professional Cooking Setup', alt: 'Gas range installation project by Alpha Home Solutions', height: 'h-[320px] md:h-[360px]' },
@@ -291,6 +291,28 @@
             alt: `Alpha Home Solutions project photo ${index + 1}`,
             height: rotatingHeights[index % rotatingHeights.length]
         }));
+
+        // Override specific repeated generic labels with the correct service names for these photos.
+        newItems[16] = {
+            ...newItems[16],
+            category: 'Home Improvement',
+            title: 'TV Mounting',
+            alt: 'TV mounting project by Alpha Home Solutions'
+        };
+
+        newItems[24] = {
+            ...newItems[24],
+            category: 'Home Improvement',
+            title: 'HRV Annual Service',
+            alt: 'HRV annual service project by Alpha Home Solutions'
+        };
+
+        newItems[25] = {
+            ...newItems[25],
+            category: 'Home Improvement',
+            title: 'AC Coil Service',
+            alt: 'AC coil service project by Alpha Home Solutions'
+        };
 
         const items = [...baseItems, ...newItems];
 
